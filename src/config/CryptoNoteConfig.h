@@ -18,13 +18,13 @@ namespace CryptoNote
     namespace parameters
     {
 
-        const uint64_t DIFFICULTY_TARGET = 90; // seconds
+        const uint64_t DIFFICULTY_TARGET = 10; // seconds
 
         const uint32_t CRYPTONOTE_MAX_BLOCK_NUMBER = 500000000;
         const size_t CRYPTONOTE_MAX_BLOCK_BLOB_SIZE = 500000000;
         const size_t CRYPTONOTE_MAX_TX_SIZE = 1000000000;
         const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX = 2239254;
-        const uint32_t CRYPTONOTE_MINED_MONEY_UNLOCK_WINDOW = 20;
+        const uint32_t CRYPTONOTE_MINED_MONEY_UNLOCK_WINDOW = 10;
         const uint64_t CRYPTONOTE_BLOCK_FUTURE_TIME_LIMIT = 60 * 60 * 2;
         const uint64_t CRYPTONOTE_BLOCK_FUTURE_TIME_LIMIT_V3 = 3 * DIFFICULTY_TARGET;
         const uint64_t CRYPTONOTE_BLOCK_FUTURE_TIME_LIMIT_V4 = 6 * DIFFICULTY_TARGET;
@@ -103,10 +103,10 @@ namespace CryptoNote
         const uint64_t MAXIMUM_MIXIN_V4 = 5;
 
         /* The heights to activate the mixin limits at */
-        const uint32_t MIXIN_LIMITS_V1_HEIGHT = 440000;
-        const uint32_t MIXIN_LIMITS_V2_HEIGHT = 620000;
-        const uint32_t MIXIN_LIMITS_V3_HEIGHT = 800000;
-        const uint32_t MIXIN_LIMITS_V4_HEIGHT = 1250000;
+        const uint32_t MIXIN_LIMITS_V1_HEIGHT = 100;
+        const uint32_t MIXIN_LIMITS_V2_HEIGHT = 200;
+        const uint32_t MIXIN_LIMITS_V3_HEIGHT = 300;
+        const uint32_t MIXIN_LIMITS_V4_HEIGHT = 400;
 
         /* The mixin to use by default with zedwallet and turtle-service */
         /* DEFAULT_MIXIN_V0 is the mixin used before MIXIN_LIMITS_V1_HEIGHT is started */
@@ -269,14 +269,9 @@ namespace CryptoNote
     const std::string LICENSE_URL = "https://github.com/kryptokrona/kryptokrona/blob/master/LICENSE";
     const static boost::uuids::uuid CRYPTONOTE_NETWORK =
         {
-            {0xf1, 0x4b, 0xb8, 0xc8, 0xb2, 0x56, 0x45, 0x2e, 0xee, 0xf0, 0xb4, 0x99, 0xab, 0x71, 0x6c, 0xcc}};
+            {0xfF, 0x44, 0xbB, 0xcC, 0xbB, 0x55, 0x44, 0x22, 0xee, 0xfF, 0xbB, 0x99, 0xaA, 0x77, 0x66, 0xcc}};
 
     const char *const SEED_NODES[] = {
-        "68.183.214.93:11897", // pool1
-        "5.9.250.93:11897",    // techy
-        "167.86.87.91:11897",  // göta pool
-        "144.91.80.155:11897", // blocksum
-        "95.111.239.13:11897", // swepool
-        "5.9.250.93:11987"     // gamersnest
+
     };
 } // CryptoNote
